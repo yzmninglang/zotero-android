@@ -59,3 +59,13 @@ jobs:
 
       - name: Deploy to Google Play Internal Test Track
         run: ./gradlew --no-configuration-cache -PpreDexLibs=false publishInternalReleaseBundle --stacktrace
+
+      - name: Build Release APK
+        run: ./gradlew assembleRelease
+
+      - name: Releasing using Hub
+        uses: sangatdesai/release-apk@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          APP_FOLDER: app
+
