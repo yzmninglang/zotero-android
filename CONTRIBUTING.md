@@ -1,4 +1,4 @@
-# Contributing to Zotero
+# Contributing to Zotero7
 
 ## Bug Reports and Feature Requests
 
